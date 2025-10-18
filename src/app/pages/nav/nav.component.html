@@ -1,0 +1,59 @@
+<div class="flex items-center justify-center">
+  <div
+    class="flex flex-col md:flex-row border-1 border-black rounded-full bg-[#1f1f1f] mt-2"
+  >
+    <div class="flex flex-col md:flex-row items-center space-x-3 my-3 mx-2">
+      <img src="assets/images/Q.png" class="w-10" alt="My Logo" />
+      <h1 class="font-bold text-white text-wrap">
+        Gabriel <br />
+        Quintino
+      </h1>
+    </div>
+
+    <!-- Botón hamburguesa móvil -->
+    <button
+      class="mx-auto md:hidden text-white focus:outline-none"
+      (click)="toggleMenu()"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-7 w-7"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16"
+        />
+      </svg>
+    </button>
+
+    <ul
+      [ngClass]="verticalMenu ? '' : 'hidden'"
+      class="flex flex-col md:flex-row nav nav-pills m-4"
+      id="pills-tab"
+      role="tablist"
+    >
+      <li
+        class="nav-item"
+        role="presentation"
+        *ngFor="let item of navs; let i = index"
+      >
+        <a
+          class="nav-link text-white"
+          [routerLink]="item.url"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          [class.active]="i === 0 && router.url === '/'"
+          role="tab"
+          [id]="'pills-' + item.id + '-tab'"
+        >
+          {{ item.nombre }}
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>

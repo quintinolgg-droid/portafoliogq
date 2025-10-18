@@ -1,0 +1,94 @@
+<app-nav></app-nav>
+<div class>
+  <div
+    class="fade-up flex md:flex-row flex-col px-2 py-3 items-start justify-start space-x-4"
+  >
+    <!-- Imagen -->
+    <div class="flex items-start">
+      <div class="border-1 border-black rounded-full bg-[#1f1f1f]">
+        <img class="imageMe" src="assets/images/yo.png" alt="" />
+      </div>
+    </div>
+
+    <!-- Texto -->
+    <div class="ms-5 mt-1 flex flex-col items-start">
+      <p class="text-sm">Full Stack developer</p>
+      <p class="text-4xl font-bold text-white my-2">
+        Luis Gabriel Quintino Guzmán
+      </p>
+      <p
+        class="text-lg md:text-xl text-left text-white max-w-md md:max-w-3xl mb-6"
+      >
+        Soy ingeniero en sistemas computacionales, un desarrollador apasionado
+        por la tecnología y el diseño, enfocado en crear experiencias digitales
+        elegantes, funcionales y modernas. He trabajado como Project Manager y
+        he liderado proyectos por mi propia cuenta, combinando organización,
+        creatividad y desarrollo técnico. Además, he participado en concursos
+        nacionales de innovación tecnológica, donde he fortalecido mi visión
+        para crear soluciones que integren tecnología y funcionalidad real.
+      </p>
+
+      <div class="flex flex-row space-x-2">
+        <a
+          href="assets/documents/CV_LuisGabrielQuintinoGuzman.pdf"
+          download="CV_LuisGabrielQuintinoGuzman.pdf"
+          class="flex items-center px-4 py-1 rounded-full bg-[#2c2c2c] text-white border border-transparent hover:bg-[#bfa64a] hover:text-black transition-colors duration-300 font-medium shadow-md"
+        >
+          Descargar CV
+        </a>
+
+        <a
+          (click)="showContacts = true"
+          class="flex items-center px-4 py-1 rounded-full bg-[#262626] text-white border border-transparent hover:bg-[#bfa64a] hover:text-black transition-colors duration-300 font-medium shadow-md cursor-pointer"
+        >
+          Contactos
+        </a>
+
+        <!-- Toast de contactos -->
+        <div
+          *ngIf="showContacts"
+          class="fixed bottom-5 right-5 bg-[#2c2c2c] text-white rounded-lg shadow-lg p-2 w-80 animate-slide-fade"
+        >
+          <h3 class="font-bold mb-2">Mis Contactos</h3>
+          <p>📧 luis0gabriel0quintino0guzman&#64;gmail.com</p>
+          <p class="mt-1">📞 +52 4451573811</p>
+          <button
+            (click)="showContacts = false"
+            class="mt-3 px-3 py-1 bg-[#bfa64a] text-black rounded hover:bg-[#c9b037] transition-colors"
+          >
+            Cerrar
+          </button>
+        </div>
+      </div>
+
+      <div class="mt-5">
+        <h2 class="text-2xl font-bold text-white mb-4">
+          Tecnologías usadas para el portafolio
+        </h2>
+
+        <div class="grid grid-cols-2 md:grid-cols-4">
+          <img
+            src="assets/images/t1.PNG"
+            class="move h-24"
+            alt="Tecnoligias usadas"
+          />
+          <img
+            src="assets/images/t2.PNG"
+            class="move h-24"
+            alt="Tecnoligias usadas"
+          />
+          <img
+            src="assets/images/t3.PNG"
+            class="move h-24"
+            alt="Tecnoligias usadas"
+          />
+          <img
+            src="assets/images/t4.PNG"
+            class="move h-20 md:ms-2"
+            alt="Tecnoligias usadas"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

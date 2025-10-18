@@ -1,0 +1,47 @@
+.fade-up {
+  opacity: 0;
+  transform: translateY(100px);
+  animation: fadeUp 1s ease-out forwards;
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-fade {
+  opacity: 0;
+  animation: slideShow 1.5s ease-out forwards;
+}
+
+@keyframes slideShow {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.move:hover {
+  animation: move-animation 1.5s ease-out forwards;
+}
+
+@keyframes move-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.imageMe {
+  width: 88%;
+}
